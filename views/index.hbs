@@ -1,0 +1,53 @@
+<div class="container" id="indexPage">
+
+	<div class="row text-center" id="loaderSection">
+		<div class="col-xs-12">
+      <div id="loader"></div>
+      <p id="loader-text">Loading data...</p>
+		</div>
+	</div>		
+
+	<div class="row text-center" id="stocksChartSection">
+		<div class="col-xs-12">
+			<div id="stocksChart" style="height: 400px; min-width: 310px"></div>
+		</div>
+	</div>
+
+	<div class="row" id="stocksListSection">
+		<div class="col-xs-12 col-sm-6 col-md-4 stocksListItem">
+			<div class="panel stock-panel" id="newStockInputPanel">
+			  <div class="panel-body">
+			  	<p>Syncs in realtime across clients</p>
+					<form class="form-inline">
+					  <div class="form-group">
+					    <label class="sr-only" for="newStockCodeInput">Stock Code</label>
+					    <div class="input-group">
+					      <span class="input-group-addon"><i class="fa fa-line-chart" aria-hidden="true"></i></span>
+					      <input type="text" class="form-control" name="newStockCodeInput" id="newStockCodeInput" placeholder="Stock Code...">
+					      <span class="input-group-btn"><button type="submit" class="btn btn-success" id="newStockCodeSubmit">Add Stock</button></span>
+					    </div>
+					  </div>
+					</form>
+					<div class="alert alert-danger" id="errorMessage">
+						<a href="#" class="close">×</a>
+  					<p></p>
+					</div>
+			  </div>
+			</div>
+		</div>
+		{{#each stocks}}
+		<div class="col-xs-12 col-sm-6 col-md-4 stocksListItem" id="{{this.name}}">
+			<div class="panel stock-panel">
+			  <div class="panel-heading clearfix">
+			    <h2 class="panel-title pull-left">{{this.name}}</h2>
+			    <div class="pull-right"><button type="button" class="close deleteStock-js"><i class="fa fa-times" aria-hidden="true"></i></button></div>
+			  </div>
+			  <div class="panel-body">
+					{{this.description}}
+			  </div>
+			</div>
+		</div>
+		{{/each}}
+	</div>
+
+</div>
