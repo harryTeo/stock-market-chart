@@ -12,7 +12,7 @@ Developed for the [freeCodeCamp](https://www.freecodecamp.com/) Back End Develop
 
 HTML, CSS, JavaScript, Bootstrap, jQuery, Handlebars.js, Highcharts, Node.js, Express.js, Socket.IO, MongoDB, Mongoose
 
-Data from [Quandl](https://www.quandl.com/) API
+Data from [Quandl](https://www.quandl.com/) API.
 
 ### Live Site
 https://harryteo-stock-market-chart.herokuapp.com/
